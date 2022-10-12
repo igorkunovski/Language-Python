@@ -12,20 +12,22 @@ def sum_of_digits():
     number_int_part = int(number_inserted)
     number_float_part = number_inserted - number_int_part
     number_float_part = round(number_float_part, 3)
-    sum1 = 0
-    sum2 = 0
+    sum = 0
 
     while number_int_part > 0:
-        sum1 += number_int_part % 10
+        sum += number_int_part % 10
         number_int_part //= 10
 
     if number_float_part > 0:
         while number_float_part != 0:
-            sum2 = sum2 + int(number_float_part * 10)
+            sum = sum + int(number_float_part * 10)
             number_float_part = round((number_float_part * 10 - int(number_float_part * 10)), 3)
-        return sum2 + sum1
+        return sum
     else:
-        return sum1
+        return sum
 
 
-print(sum_of_digits())
+try:
+    print(sum_of_digits())
+except:
+    print('Incorrect number!')
