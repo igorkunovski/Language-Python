@@ -34,7 +34,7 @@ def leave_float_part(float_list: list):
     return result_list
 
 
-def find_largest_and_smallest_elem_sum(lst: list):
+def find_largest_and_smallest_elem_subtr(lst: list):
     if len(lst) == 0:
         return 0
 
@@ -53,4 +53,4 @@ def find_largest_and_smallest_elem_sum(lst: list):
 ins_list = make_num_list()
 list_fl = leave_float_part(ins_list)
 print(list_fl)
-print('Result: ' + str(find_largest_and_smallest_elem_sum(list_fl)))
+print('Result: ' + str(find_largest_and_smallest_elem_subtr(list_fl)))
